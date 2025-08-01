@@ -28,7 +28,7 @@
          <div class="mb-3">
           <label  for="exampleInputPassword1" class="form-label">Dicription</label>
           <textarea name="recipe_discription" required  class="form-control"></textarea>
-        </div>
+         </div>
  
          <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Recipe image</label>
@@ -59,13 +59,26 @@
       <td>
         <img src='/media/{{veg.recipe_image}} ' style="height:100px"></td>
       <td>
-        <a href="/delete-item/{{veg.id}}/" class="btn btn-danger">Delete</a>
+        <a href="/delete-item/{{veg.id}}/" class="btn btn-danger ">Delete</a>
+        <a href="/update-item/{{veg.id}}/" class="btn btn-success mt-3 " >Update</a>
       </td>
     </tr>
 
     {% endfor %}
    </tbody>
-  </table>
+   
+<div class="container mt-5">
+   <div class="mb-3 mx-auto col-5 ">
+      <form>
+       <div class="mb-3">
+          <label  for="exampleInputPassword1" class="form-label">Recipe search</label>
+          <input name="search"  class="form-control" >
+         </div>
+     <button type="search" class="btn btn-primary mt-3">Search</button>
+    </form>
+</diV>
 </div>
+  </table>
+
 </body>
 </html>
